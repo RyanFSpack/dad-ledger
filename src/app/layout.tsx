@@ -34,13 +34,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: site.name,
-    title: "Dad Ledger",
-    description: site.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dad Ledger",
-    description: site.description,
   },
   robots: {
     index: true,

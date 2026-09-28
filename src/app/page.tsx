@@ -67,7 +67,7 @@ export default function HomePage() {
           </h2>
           <div className="mt-8">
             {featured ? (
-              <EpisodeCard episode={featured} priority />
+              <EpisodeCard episode={featured} />
             ) : (
               <EmptyFilms />
             )}

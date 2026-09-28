@@ -8,15 +8,9 @@ type YouTubeFacadeProps = {
   videoId: string;
   title: string;
   kind: "episode" | "short";
-  priority?: boolean;
 };
 
-export function YouTubeFacade({
-  videoId,
-  title,
-  kind,
-  priority = false,
-}: YouTubeFacadeProps) {
+export function YouTubeFacade({ videoId, title, kind }: YouTubeFacadeProps) {
   const [embedSrc, setEmbedSrc] = useState<string | null>(null);
   const frameClass =
     kind === "short" ? "aspect-[9/16] w-full" : "aspect-video w-full";
@@ -62,7 +56,7 @@ export function YouTubeFacade({
             ? "(min-width: 1024px) 240px, (min-width: 640px) 40vw, 50vw"
             : "(min-width: 768px) 640px, 100vw"
         }
-        priority={priority}
+        unoptimized
         className="h-full w-full object-cover"
       />
       <span className="sr-only">Play {title}</span>

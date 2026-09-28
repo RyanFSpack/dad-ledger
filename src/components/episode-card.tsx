@@ -4,13 +4,11 @@ import { YouTubeFacade } from "@/components/youtube-facade";
 
 type EpisodeCardProps = {
   episode: Episode;
-  priority?: boolean;
   layout?: "feature" | "compact";
 };
 
 export function EpisodeCard({
   episode,
-  priority = false,
   layout = "feature",
 }: EpisodeCardProps) {
   const published = formatPublishedDate(episode.publishedOn);
@@ -23,7 +21,6 @@ export function EpisodeCard({
           videoId={episode.id}
           title={episode.title}
           kind={episode.kind}
-          priority={priority}
         />
         <div>
           <p className="kicker">
@@ -55,7 +52,6 @@ export function EpisodeCard({
         videoId={episode.id}
         title={episode.title}
         kind={episode.kind}
-        priority={priority}
       />
       <div>
         <p className="kicker">
