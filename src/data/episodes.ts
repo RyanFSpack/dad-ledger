@@ -391,7 +391,7 @@ export const episodes: Episode[] = [
   {
     id: "DxXX8oz3XPE",
     slug: "the-truth-about-privacy-coins-nobodys-talking-about-w-briteresi",
-    title: "The Truth About Privacy Coins Nobody's Talking About w/ ‪@BriTeresi‬",
+    title: "The Truth About Privacy Coins Nobody's Talking About w/ @BriTeresi",
     publishedOn: "2026-07-23",
     kind: "episode",
     summary:
