@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { episodes } from "@/data/episodes";
 import { site } from "@/lib/site";
 import { getSiteUrl } from "@/lib/site-url";
 
@@ -25,5 +26,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.5,
     },
+    ...episodes.map((episode) => ({
+      url: `${origin}/episodes/${episode.slug}`,
+      lastModified: episode.publishedOn,
+      changeFrequency: "yearly" as const,
+      priority: 0.6,
+    })),
   ];
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ChannelActions } from "@/components/channel-actions";
+import { PodcastLinks } from "@/components/podcast-links";
 import { topicLabels } from "@/lib/episodes";
 import { site } from "@/lib/site";
 
@@ -76,6 +77,12 @@ export default function AboutPage() {
           are educational. They are not financial, tax, or investment advice.
           Decisions about a family&apos;s money belong to that family.
         </p>
+
+        {site.podcastLinks.length > 0 ? (
+          <section className="mt-12" aria-labelledby="podcast-heading">
+            <PodcastLinks />
+          </section>
+        ) : null}
       </article>
 
       <aside className="h-fit border border-line bg-paper-raised p-6 lg:sticky lg:top-6">

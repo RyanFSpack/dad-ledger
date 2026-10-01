@@ -1,5 +1,6 @@
+import Link from "next/link";
 import { formatPublishedDate } from "@/lib/format";
-import { topicLine, watchUrl, type Episode } from "@/lib/episodes";
+import { episodePath, topicLine, watchUrl, type Episode } from "@/lib/episodes";
 import { YouTubeFacade } from "@/components/youtube-facade";
 
 type EpisodeCardProps = {
@@ -29,17 +30,22 @@ export function EpisodeCard({
             {kindLabel}
           </p>
           <h3 className="mt-2 font-serif text-xl leading-snug tracking-tight">
+            <Link className="text-link" href={episodePath(episode)}>
+              {episode.title}
+            </Link>
+          </h3>
+          <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+            {episode.summary}
+          </p>
+          <p className="mt-2">
             <a
-              className="text-link"
+              className="text-link text-sm font-semibold"
               href={watchUrl(episode)}
               target="_blank"
               rel="noopener noreferrer"
             >
-              {episode.title}
+              Watch on YouTube
             </a>
-          </h3>
-          <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-            {episode.summary}
           </p>
         </div>
       </article>
@@ -61,7 +67,9 @@ export function EpisodeCard({
           {episode.topics.length > 0 ? ` · ${topicLine(episode)}` : ""}
         </p>
         <h3 className="mt-3 font-serif text-3xl leading-tight tracking-tight">
-          {episode.title}
+          <Link className="text-link" href={episodePath(episode)}>
+            {episode.title}
+          </Link>
         </h3>
         <p className="mt-4 text-ink-soft">{episode.summary}</p>
         <p className="mt-5">
