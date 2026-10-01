@@ -27,7 +27,10 @@ export function SiteHeader() {
           className="col-span-2 flex gap-6 sm:col-span-1 sm:col-start-2"
         >
           {links.map((link) => {
-            const current = pathname === link.href;
+            const current =
+              link.href === "/episodes"
+                ? pathname === "/episodes" || pathname.startsWith("/episodes/")
+                : pathname === link.href;
             return (
               <Link
                 key={link.href}

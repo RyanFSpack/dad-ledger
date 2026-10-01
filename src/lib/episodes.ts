@@ -14,6 +14,33 @@ export const topicLabels: Record<Topic, string> = {
   wealth: "Smart wealth",
 };
 
+export function episodeBySlug(slug: string): Episode | undefined {
+  return episodes.find((episode) => episode.slug === slug);
+}
+
+export function episodePath(episode: Episode): string {
+  return `/episodes/${episode.slug}`;
+}
+
+export function episodeNeighbors(episode: Episode): {
+  newer?: Episode;
+  older?: Episode;
+} {
+  const index = episodes.findIndex((item) => item.id === episode.id);
+  if (index < 0) {
+    return {};
+  }
+
+  return {
+    newer: index > 0 ? episodes[index - 1] : undefined,
+    older: index < episodes.length - 1 ? episodes[index + 1] : undefined,
+  };
+}
+
+export function embedUrl(episode: Episode): string {
+  return `https://www.youtube-nocookie.com/embed/${episode.id}`;
+}
+
 export function episodesByKind(kind: EpisodeKind): Episode[] {
   return episodes
     .filter((episode) => episode.kind === kind)

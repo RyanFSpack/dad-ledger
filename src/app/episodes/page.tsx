@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Episodes",
   description:
-    "Recent films and shorts from The Dad Ledger on YouTube, covering fatherhood, faith, markets, and digital assets.",
+    "Films and shorts from The Dad Ledger on YouTube, covering fatherhood, faith, markets, and digital assets.",
   alternates: {
     canonical: "/episodes",
   },
@@ -25,9 +25,8 @@ export default function EpisodesPage() {
       <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-soft">
         Longer films are embedded below. Shorts use the same player, opened
         only when you press play. Everything also lives on YouTube. This list
-        is recent public uploads through{" "}
-        {formatPublishedDate(site.catalogUpdated)}. Older films stay on the
-        channel.
+        is the public uploads on the channel through{" "}
+        {formatPublishedDate(site.catalogUpdated)}.
       </p>
 
       <section className="mt-14" aria-labelledby="films-heading">

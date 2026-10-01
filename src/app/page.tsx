@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ChannelActions } from "@/components/channel-actions";
 import { EpisodeCard } from "@/components/episode-card";
+import { PodcastLinks } from "@/components/podcast-links";
 import { episodesByKind, latestEpisode, topicLabels } from "@/lib/episodes";
 import { site } from "@/lib/site";
 
@@ -119,6 +120,14 @@ export default function HomePage() {
           )}
         </div>
       </section>
+
+      {site.podcastLinks.length > 0 ? (
+        <section className="border-t border-line" aria-labelledby="podcast-heading">
+          <div className="mx-auto max-w-5xl px-5 py-14">
+            <PodcastLinks />
+          </div>
+        </section>
+      ) : null}
 
       <section className="border-t border-line" aria-labelledby="watch-heading">
         <div className="mx-auto max-w-5xl px-5 py-14">
