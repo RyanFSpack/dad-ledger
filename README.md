@@ -25,7 +25,7 @@ npm start
 
 ## Episodes
 
-Records live in `src/data/episodes.ts`. The current list is the public uploads playlist, taken on October 1, 2026, with `yt-dlp --flat-playlist` and no API key. Titles, dates, and descriptions were read from each video's public watch page. `kind` follows the channel Videos tab (`episode`) and Shorts tab (`short`).
+Records live in `src/data/episodes.ts`. The list is the public uploads playlist, first taken on October 1, 2026 and refreshed on November 9, 2026, with `yt-dlp --flat-playlist` and the public RSS feed, and no API key. Titles, dates, and descriptions were read from those public sources. `kind` follows the channel Videos tab (`episode`) and Shorts tab (`short`). Existing slugs stay as they were when each film was added.
 
 To add a film, append an object:
 
