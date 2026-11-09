@@ -1,14 +1,17 @@
 /**
  * Public uploads from The Dad Ledger.
- * Snapshot on 2026-10-01. The channel uploads playlist was listed with
- * yt-dlp --flat-playlist (no API key). Title, publish date, and description
- * for each film come from that video's public watch page.
- * The uploads playlist, the Videos tab, and the Shorts tab listed the same
- * 40 ids. kind "episode" is the Videos tab. kind "short" is the Shorts tab.
+ * First snapshot on 2026-10-01. Refreshed on 2026-11-09.
+ * The channel uploads playlist was listed with yt-dlp --flat-playlist
+ * (no API key). Titles, dates, and descriptions come from the public RSS
+ * feed and each video's public watch page.
+ * On 2026-11-09 the uploads playlist had 51 ids, the Videos tab 12, and
+ * the Shorts tab 39. Nothing public was newer than 2026-10-21.
+ * kind "episode" is the Videos tab. kind "short" is the Shorts tab.
  *
  * `id` is the YouTube video id. `slug` is a stable kebab-case form of the
- * public title at the time it was added. Summaries are one or two neutral
- * sentences from the public title and description.
+ * public title at the time it was added. Existing slugs are not renamed.
+ * Summaries are one or two neutral sentences from the public title and
+ * description.
  */
 
 export const topics = ["faith", "family", "fatherhood", "wealth"] as const;
@@ -28,6 +31,116 @@ export type Episode = {
 };
 
 export const episodes: Episode[] = [
+  {
+    id: "3TlGs2vk5nc",
+    slug: "a-strategy-that-worked-before-may-stop-working-when-the-market-changes",
+    title: "A strategy that worked before may stop working when the market changes.",
+    publishedOn: "2026-10-21",
+    kind: "short",
+    summary:
+      "Simon on trading through different crypto market cycles: emotions can lead to overtrading, and a strong result in one cycle does not tell the whole story. The clip's point is to watch changing conditions, manage risk, and know when a strategy needs adjusting.",
+    topics: ["wealth"],
+  },
+  {
+    id: "c00t-Mg_e4Q",
+    slug: "trading-can-feel-like-a-roller-coaster-when-you-keep-chasing-the-next-big-move",
+    title: "Trading can feel like a roller coaster when you keep chasing the next big move.",
+    publishedOn: "2026-10-21",
+    kind: "short",
+    summary:
+      "A clip on the urge to sell, jump to another trade, and chase the excitement again. Simon says that in his early trading he was lucky, and that he thought he could predict what would happen next.",
+    topics: ["wealth"],
+  },
+  {
+    id: "CppfM_QoWbE",
+    slug: "a-winning-trade-can-make-you-feel-skilled-but-was-it-skill-or-luck",
+    title: "A winning trade can make you feel skilled. But was it skill or luck?",
+    publishedOn: "2026-10-19",
+    kind: "short",
+    summary:
+      "A guest on his biggest mistake: believing he could make money in the markets without a strategy. The clip looks at how early wins can build false confidence and lead to bigger risks.",
+    topics: ["wealth"],
+  },
+  {
+    id: "p_G1XxwKZdM",
+    slug: "why-disciplined-crypto-trading-can-feel-boring",
+    title: "Why Disciplined Crypto Trading Can Feel Boring",
+    publishedOn: "2026-10-19",
+    kind: "short",
+    summary:
+      "A guest on considering the possible loss and the potential gain before a trade, and on repeating a planned process when it feels boring instead of chasing excitement.",
+    topics: ["wealth"],
+  },
+  {
+    id: "Z--RMJ56p1w",
+    slug: "he-thought-he-was-a-great-trader-then-lost-everything",
+    title: "He Thought He Was a Great Trader Then Lost Everything",
+    publishedOn: "2026-10-18",
+    kind: "short",
+    summary:
+      "A guest on making money without a trading system, mistaking that luck for skill, and then losing everything. He uses a coin-flip example to say a short winning streak did not prove he knew what he was doing.",
+    topics: ["wealth"],
+  },
+  {
+    id: "zFGRtMcffQU",
+    slug: "risk-first-trade-second-the-crypto-trading-mindset",
+    title: "Risk First, Trade Second: The Crypto Trading Mindset",
+    publishedOn: "2026-10-17",
+    kind: "short",
+    summary:
+      "A guest on his rule of risk first, trade second: plan for the downside before a trade, and after a loss choose the next trade from a system instead of chasing a quick recovery.",
+    topics: ["wealth"],
+  },
+  {
+    id: "8HeMKgm1AQk",
+    slug: "crypto-leverage-how-much-risk-are-you-taking",
+    title: "Crypto Leverage: How Much Risk Are You Taking?",
+    publishedOn: "2026-10-16",
+    kind: "short",
+    summary:
+      "A guest on how his team adjusts leverage from their read of a trade setup, with a poker analogy for edge and position size. He also describes staying out when a setup does not meet their criteria, with examples from Bitcoin, Ethereum, and altcoin trades.",
+    topics: ["wealth"],
+  },
+  {
+    id: "a-8cYOhCF50",
+    slug: "dont-fall-in-love-with-a-crypto-coin",
+    title: "Don’t Fall in Love With a Crypto Coin",
+    publishedOn: "2026-10-15",
+    kind: "short",
+    summary:
+      "A guest on choosing a coin from a trading system rather than attachment, including a different view of Bitcoin. He uses Fibonacci retracement levels, support, and resistance to plan stop losses.",
+    topics: ["wealth"],
+  },
+  {
+    id: "ssHqH--wk5c",
+    slug: "is-your-crypto-strategy-wrong-for-this-market",
+    title: "Is Your Crypto Strategy Wrong for This Market?",
+    publishedOn: "2026-10-14",
+    kind: "short",
+    summary:
+      "A guest on why market cycles, volatility, and liquidity matter when choosing between scalping, swing trading, and longer-term holding. He says slowing down can be part of a disciplined approach.",
+    topics: ["wealth"],
+  },
+  {
+    id: "4UToCLTFMw0",
+    slug: "why-crypto-trading-feels-different-this-cycle",
+    title: "Why Crypto Trading Feels Different This Cycle",
+    publishedOn: "2026-10-13",
+    kind: "short",
+    summary:
+      "A guest on why he sees this cycle as more institutional than 2017 and 2021, with ETFs and professional traders changing the competition. He also shares a personal outlook for mid-2027.",
+    topics: ["wealth"],
+  },
+  {
+    id: "xCyTbtrv9b4",
+    slug: "why-doing-nothing-can-be-your-best-crypto-trade-simon-mach",
+    title: "Why Doing Nothing Can Be Your Best Crypto Trade | Simon Mach",
+    publishedOn: "2026-10-12",
+    kind: "episode",
+    summary:
+      "Ryan talks with Simon Mach, founder of My Crypto Paradise, about trading psychology, risk management, and waiting when a setup does not fit a system. The description covers early wins that were later lost, Bitcoin cycles, leverage, stop losses, and Fibonacci levels, and it says the episode is educational and not financial advice.",
+    topics: ["wealth"],
+  },
   {
     id: "DZWIUZ7byGg",
     slug: "cryptocurrency-adoption-and-risks-with-stable-coins",

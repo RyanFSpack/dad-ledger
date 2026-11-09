@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
+import { legacyRedirects } from "./src/data/legacy-redirects";
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return legacyRedirects();
+  },
   images: {
     remotePatterns: [
       {

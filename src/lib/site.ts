@@ -12,7 +12,7 @@ export const site = {
   subscribeUrl: "https://www.youtube.com/@TheDadLedger?sub_confirmation=1",
   channelId: "UCg2-WgvQz3n6laeNgGa732g",
   hosts: ["Trent", "Ryan", "Timo"] as const,
-  catalogUpdated: "2026-10-01",
+  catalogUpdated: "2026-11-09",
   /**
    * Public listen pages for the show titled The Dad Ledger.
    * Checked 2026-10-01: Apple Podcasts id 1822824895 and Spotify show
